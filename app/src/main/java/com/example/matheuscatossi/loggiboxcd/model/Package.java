@@ -2,75 +2,69 @@ package com.example.matheuscatossi.loggiboxcd.model;
 
 public class Package {
 
-    private String weight;
-    private String date;
-    private String address_delivery;
-    private String address_deliveryman;
-    private DeliveryMan deliveryman;
+    private String id;
+    private double weight;
+    private String deadline;
+    private int deadline_days;
+    private String delivery_address;
     private String document_deliveryman;
     private String name_deliveryman;
-    private String code;
+    private String id_user;
+    private User user;
+    private String route_start;
+    private String route_end;
+    private boolean delivered;
+    private boolean delivering;
+    private boolean distribution_center;
 
-    public Package() {
 
-    }
-
-    public Package(String weight, String date, String address_delivery, String address_deliveryman, String code, String document_deliveryman, String name_deliveryman){
+    public Package(String id, double weight, String deadline, int deadline_days, String delivery_address, String document_deliveryman, String name_deliveryman, String id_user, User user, String route_start, String route_end, boolean delivered, boolean delivering, boolean distribution_center) {
+        this.id = id;
         this.weight = weight;
-        this.date = date;
-        this.address_delivery = address_delivery;
-        this.address_deliveryman = address_deliveryman;
-        this.code = code;
-        this.name_deliveryman = name_deliveryman;
+        this.deadline = deadline;
+        this.deadline_days = deadline_days;
+        this.delivery_address = delivery_address;
         this.document_deliveryman = document_deliveryman;
+        this.name_deliveryman = name_deliveryman;
+        this.id_user = id_user;
+        this.user = user;
+        this.route_start = route_start;
+        this.route_end = route_end;
+        this.delivered = delivered;
+        this.delivering = delivering;
+        this.distribution_center = distribution_center;
     }
 
-    public String getWeight() {
+    public double getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(double weight) {
         this.weight = weight;
     }
 
-    public String getDate() {
-        return date;
+    public String getDeadline() {
+        return deadline;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDeadline(String deadline) {
+        this.deadline = deadline;
     }
 
-    public String getAddress_delivery() {
-        return address_delivery;
+    public int getDeadline_days() {
+        return deadline_days;
     }
 
-    public void setAddress_delivery(String address_delivery) {
-        this.address_delivery = address_delivery;
+    public void setDeadline_days(int deadline_days) {
+        this.deadline_days = deadline_days;
     }
 
-    public String getAddress_deliveryman() {
-        return address_deliveryman;
+    public String getDelivery_address() {
+        return delivery_address;
     }
 
-    public void setAddress_deliveryman(String address_deliveryman) {
-        this.address_deliveryman = address_deliveryman;
-    }
-
-    public DeliveryMan getDeliveryman() {
-        return deliveryman;
-    }
-
-    public void setDeliveryman(DeliveryMan deliveryman) {
-        this.deliveryman = deliveryman;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
+    public void setDelivery_address(String delivery_address) {
+        this.delivery_address = delivery_address;
     }
 
     public String getDocument_deliveryman() {
@@ -87,5 +81,69 @@ public class Package {
 
     public void setName_deliveryman(String name_deliveryman) {
         this.name_deliveryman = name_deliveryman;
+    }
+
+    public String getId_user() {
+        return id_user;
+    }
+
+    public void setId_user(String id_user) {
+        this.id_user = id_user;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public String getRoute_start() {
+        return route_start;
+    }
+
+    public void setRoute_start(String route_start) {
+        this.route_start = route_start;
+    }
+
+    public String getRoute_end() {
+        return route_end;
+    }
+
+    public void setRoute_end(String route_end) {
+        this.route_end = route_end;
+    }
+
+    public boolean isDelivered() {
+        return delivered;
+    }
+
+    public void setDelivered(boolean delivered) {
+        this.delivered = delivered;
+    }
+
+    public boolean isDelivering() {
+        return delivering;
+    }
+
+    public void setDelivering(boolean delivering) {
+        this.delivering = delivering;
+    }
+
+    public boolean isDistribution_center() {
+        return distribution_center;
+    }
+
+    public void setDistribution_center(boolean distribution_center) {
+        this.distribution_center = distribution_center;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

@@ -68,12 +68,12 @@ public class PackageCustomAdapter extends RecyclerView.Adapter<PackageCustomAdap
 
         final Package packageItem = packageList.get(position);
         holder.tv_weight.setText("" + packageItem.getWeight());
-        holder.tv_date.setText("" + packageItem.getDate());
-        holder.tv_address_delivery.setText("" + packageItem.getAddress_delivery());
-        holder.tv_address_deliveryman.setText("" + packageItem.getAddress_deliveryman());
-        holder.tv_code.setText("" + packageItem.getCode());
-        holder.tv_document_deliveryman.setText("" + packageItem.getDocument_deliveryman());
-        holder.tv_name_deliveryman.setText("" + packageItem.getName_deliveryman());
+        holder.tv_date.setText("" + packageItem.getDeadline_days() + " dia(s)");
+        holder.tv_address_delivery.setText("" + packageItem.getDelivery_address());
+        holder.tv_address_deliveryman.setText("" + packageItem.getUser().getAddress());
+        holder.tv_code.setText("");
+        holder.tv_document_deliveryman.setText("" + packageItem.getUser().getCpf());
+        holder.tv_name_deliveryman.setText("" + packageItem.getUser().getName());
 
     }
 
